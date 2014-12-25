@@ -2,13 +2,13 @@
 
 Shellany captures command output.
 
-## Features:
+## Features
 
-- portability (should work on recent JRuby versions)
-- capturing stdout, stderr in a convenient way
-- returning the result in a convenient way
-- detecting if a shell is needed (though incomplete/primitive implementation)
-- prevents running the same command multiple times
+- Portability (should work on recent JRuby versions).
+- Capturing stdout, stderr in a convenient way.
+- Returning the result in a convenient way.
+- Detecting if a shell is needed (though incomplete/primitive implementation).
+- Prevents running the same command multiple times.
 
 ## Installation
 
@@ -57,16 +57,16 @@ Only developed enough for Guard to run, though pull requests are more than welco
 
 Especially for:
 
-- better API
-- better shell detection code
-- better support for various system() arguments
-- better support for redireciton handling
-- better support for shell detection (e.g. Windows)
+- Better API.
+- Better shell detection code.
+- Better support for various `system()` arguments.
+- Better support for redirection handling.
+- Better support for shell detection (e.g. Windows).
 
 ## Contributing
 
-1. Fork it ( https://github.com/[my-github-username]/shellany/fork )
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create a new Pull Request
+1. Fork it (https://github.com/guard/shellany/fork).
+2. Create your feature branch (`git checkout -b my-new-feature`).
+3. Commit your changes (`git commit -am 'Add some feature'`).
+4. Push to the branch (`git push origin my-new-feature`).
+5. Create a new Pull Request.
