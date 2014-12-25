@@ -31,6 +31,8 @@ Or install it yourself as:
 Basic usage:
 
 ```ruby
+require 'shellany/sheller'
+
 Shellany::Sheller.stdout("echo abc") # => "abc"
 Shellany::Sheller.stderr("touch /foo") # => "touch: cannot touch  ‘/aef’: Permission denied
 Shellany::Sheller.run("false") # => false
@@ -40,6 +42,8 @@ Shellany::Sheller.system("clear") # => clears screen (no capture done)
 Using Sheller object:
 
 ```ruby
+require 'shellany/sheller'
+
 sh = Shellany::Sheller.new('grep /etc/passed|tail -n 1') # does nothing
 
 sh.stdout # shows output (runs the command since it wasn't run)
