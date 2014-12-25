@@ -1,6 +1,14 @@
 # Shellany
 
-TODO: Write a gem description
+Shellany captures command output.
+
+## Features:
+
+- portability (should work on recent JRuby versions)
+- capturing stdout, stderr in a convenient way
+- returning the result in a convenient way
+- detecting if a shell is needed (though incomplete/primitive implementation)
+- prevents running the same command multiple times
 
 ## Installation
 
@@ -20,7 +28,36 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Basic usage:
+
+```ruby
+Shellany::Sheller.stdout("echo abc") # => "abc"
+Shellany::Sheller.stderr("touch /foo") # => "touch: cannot touch  ‘/aef’: Permission denied
+Shellany::Sheller.run("false") # => false
+Shellany::Sheller.system("clear") # => clears screen (no capture done)
+```
+
+Using Sheller object:
+
+```ruby
+sh = Shellany::Sheller.new('grep /etc/passed|tail -n 1') # does nothing
+
+sh.stdout # shows output (runs the command since it wasn't run)
+sh.stderr # shows stderr (does not run the command)
+sh.ok? # returns true if exit code was zero (does not run the command)
+```
+
+## Project status
+
+Only developed enough for Guard to run, though pull requests are more than welcome.
+
+Especially for:
+
+- better API
+- better shell detection code
+- better support for various system() arguments
+- better support for redireciton handling
+- better support for shell detection (e.g. Windows)
 
 ## Contributing
 

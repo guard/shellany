@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = Shellany::VERSION
   spec.authors       = ["Cezary Baginski"]
   spec.email         = ["cezary@chronomantic.net"]
-  spec.summary       = %q{TODO: Write a short summary. Required.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
+  spec.summary       = %q{Simple, somewhat portable command capturing}
+  spec.description   = %q{MRI+JRuby compatible command output capturing}
   spec.homepage      = ""
   spec.license       = "MIT"
 
@@ -19,6 +19,4 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   spec.add_development_dependency "bundler", "~> 1.7"
-  spec.add_development_dependency "rake", "~> 10.0"
-  spec.add_development_dependency "rspec"
 end
