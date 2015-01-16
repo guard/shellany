@@ -4,10 +4,10 @@ rvm:
   - 1.9.3
   - 2.0.0
   - 2.1.5
+  - 2.2.0
   - ruby-head
   - jruby
   - rbx-2
-matrix:
-  allow_failures:
-    - rvm: rbx
-    - rvm: jruby
+addons:
+  code_climate:
+    repo_token: 71e004b35c45c89dfdd44c17a068166546cf01b1c64f7e9aa3eaf9ea9a61b42a
