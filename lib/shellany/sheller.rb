@@ -1,13 +1,13 @@
 require "open3"
 
 module Shellany
-  # The Guard sheller abstract the actual subshell
+  # Sheller abstracts the actual subshell
   # calls and allow easier stubbing.
   #
   class Sheller
     attr_reader :status
 
-    # Creates a new Guard::Sheller object.
+    # Creates a new Shellany::Sheller object.
     #
     # @param [String] args a command to run in a subshell
     # @param [Array<String>] args an array of command parts to run in a subshell
@@ -43,11 +43,8 @@ module Shellany
     #
     def run
       unless ran?
-        status, output, errors = self.class._system_with_capture(*@command)
+        @status, @stdout, @stderr = self.class._system_with_capture(*@command)
         @ran = true
-        @stdout = output
-        @stderr = errors
-        @status = status
       end
 
       ok?
@@ -103,7 +100,7 @@ module Shellany
     def self._system_with_no_capture(*args)
       Kernel.system(*args)
       result = $?
-      errors = (result == 0) || "Guard failed to run: #{args.inspect}"
+      errors = (result == 0) || "Shellany::Sheller failed to run: #{args.inspect}"
       [result, nil, errors]
     end
 
@@ -121,7 +118,7 @@ module Shellany
 
       [status, stdout, stderr]
     rescue Errno::ENOENT, IOError => e
-      [nil, nil, "Guard::Sheller failed (#{e.inspect})"]
+      [nil, nil, "Shellany::Sheller failed (#{e.inspect})"]
     end
 
     # Only needed on JRUBY, because MRI properly detects ';' and metachars
