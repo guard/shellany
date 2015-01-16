@@ -1,5 +1,7 @@
 # Shellany
 
+[![Gem Version](https://badge.fury.io/rb/shellany.png)](http://badge.fury.io/rb/shellany) [![Build Status](https://travis-ci.org/guard/shellany.svg)](https://travis-ci.org/guard/shellany) [![Dependency Status](https://gemnasium.com/guard/shellany.png)](https://gemnasium.com/guard/shellany) [![Code Climate](https://codeclimate.com/github/guard/shellany/badges/gpa.svg)](https://codeclimate.com/github/guard/shellany) [![Test Coverage](https://codeclimate.com/github/guard/shellany/badges/coverage.svg)](https://codeclimate.com/github/guard/shellany) [![Inline docs](http://inch-ci.org/github/guard/shellany.svg)](http://inch-ci.org/github/guard/shellany)
+
 Shellany captures command output.
 
 ## Features
