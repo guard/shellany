@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["cezary@chronomantic.net"]
   spec.summary       = %q{Simple, somewhat portable command capturing}
   spec.description   = %q{MRI+JRuby compatible command output capturing}
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/guard/shellany"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
